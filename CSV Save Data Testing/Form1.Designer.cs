@@ -35,6 +35,11 @@
             this.rdB5 = new System.Windows.Forms.RadioButton();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnLoad = new System.Windows.Forms.Button();
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.lstOutput = new System.Windows.Forms.ListBox();
+            this.txtAdd = new System.Windows.Forms.TextBox();
+            this.btnAdd = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
             // 
             // rdB1
@@ -94,9 +99,9 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(713, 12);
+            this.btnSave.Location = new System.Drawing.Point(668, 12);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.Size = new System.Drawing.Size(120, 23);
             this.btnSave.TabIndex = 5;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -104,19 +109,56 @@
             // 
             // btnLoad
             // 
-            this.btnLoad.Location = new System.Drawing.Point(713, 41);
+            this.btnLoad.Location = new System.Drawing.Point(668, 41);
             this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(75, 23);
+            this.btnLoad.Size = new System.Drawing.Size(120, 23);
             this.btnLoad.TabIndex = 6;
             this.btnLoad.Text = "Load";
             this.btnLoad.UseVisualStyleBackColor = true;
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
+            // 
+            // trackBar1
+            // 
+            this.trackBar1.Location = new System.Drawing.Point(2, 406);
+            this.trackBar1.Maximum = 500;
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Size = new System.Drawing.Size(797, 45);
+            this.trackBar1.TabIndex = 7;
+            // 
+            // lstOutput
+            // 
+            this.lstOutput.FormattingEnabled = true;
+            this.lstOutput.ItemHeight = 15;
+            this.lstOutput.Location = new System.Drawing.Point(668, 70);
+            this.lstOutput.Name = "lstOutput";
+            this.lstOutput.Size = new System.Drawing.Size(120, 124);
+            this.lstOutput.TabIndex = 8;
+            // 
+            // txtAdd
+            // 
+            this.txtAdd.Location = new System.Drawing.Point(668, 200);
+            this.txtAdd.Name = "txtAdd";
+            this.txtAdd.Size = new System.Drawing.Size(120, 23);
+            this.txtAdd.TabIndex = 9;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(668, 229);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(120, 23);
+            this.btnAdd.TabIndex = 10;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.txtAdd);
+            this.Controls.Add(this.lstOutput);
+            this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.rdB5);
@@ -126,6 +168,7 @@
             this.Controls.Add(this.rdB1);
             this.Name = "Form1";
             this.Text = "Save Data Testing";
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -140,5 +183,9 @@
         private RadioButton rdB5;
         private Button btnSave;
         private Button btnLoad;
+        private TrackBar trackBar1;
+        private ListBox lstOutput;
+        private TextBox txtAdd;
+        private Button btnAdd;
     }
 }

@@ -11,7 +11,7 @@ namespace CSV_Save_Data_Testing
         void SaveFile(string fileName, Array Arr)
         {
             StreamWriter sw = new StreamWriter(fileName);
-            foreach (var item in lst.Items)
+            foreach (var item in Arr)
             {
                 sw.WriteLine(item.ToString());
             }
@@ -24,7 +24,10 @@ namespace CSV_Save_Data_Testing
             string strLine;
             while ((strLine = sw.ReadLine()) != null)
             {
-                lst.Items.Add(strLine);
+                foreach (int tmpInt in Arr)
+                {
+                    lstOutput.Items.Add(tmpInt);
+                }
             }
             sw.Close();
         }
