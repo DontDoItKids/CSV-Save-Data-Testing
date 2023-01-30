@@ -2,10 +2,10 @@ namespace CSV_Save_Data_Testing
 {
     public partial class Form1 : Form
     {
+        
         const int ARRAYSIZE = 5;
         int[] SaveDataArr = new int[ARRAYSIZE];
-
-
+        const string SAVEFILENAME = "SaveData.txt";
 
 
         void SaveFile(string fileName, Array Arr)
@@ -32,8 +32,6 @@ namespace CSV_Save_Data_Testing
             sw.Close();
         }
 
-
-
         public Form1()
         {
             InitializeComponent();
@@ -41,12 +39,27 @@ namespace CSV_Save_Data_Testing
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-
+            SaveFile(SAVEFILENAME, SaveDataArr);
         }
 
         private void btnLoad_Click(object sender, EventArgs e)
         {
+            LoadFile(SAVEFILENAME, SaveDataArr);
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            if(lstOutput.Items.Count == 5)
+            {
+                MessageBox.Show("Limit of 5 Items Reached");
+            }
+            else
+            {
+                lstOutput.Items.Add(txtAdd.Text);
+            }
 
         }
+
     }
+
 }
